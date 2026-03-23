@@ -11,7 +11,7 @@ return new class() extends Migration {
             $table->id();
             $table->foreignId('custom_build_id')->constrained('custom_builds')->cascadeOnDelete();
             $table->foreignId('product_id')->constrained('products')->cascadeOnDelete();
-            $table->integer('stock')->default(1);
+            $table->integer('quantity')->default(1);
             $table->integer('price');
             $table->timestamps();
         });

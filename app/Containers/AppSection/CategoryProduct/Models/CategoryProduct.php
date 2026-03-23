@@ -7,6 +7,8 @@ use App\Ship\Parents\Models\Model as ParentModel;
 
 final class CategoryProduct extends ParentModel
 {
+    protected $table = 'category_products';
+    
     protected $fillable = [
         'name',
     ];

@@ -10,6 +10,8 @@ final class CreateCategoryProductRequest extends ParentRequest
 
     public function rules(): array
     {
-        return [];
+        return [
+            'name' => ['required', 'string', 'max:255'],
+        ];
     }
 }

@@ -12,6 +12,6 @@ final class UpdateCategoryProductRequest extends ParentRequest
 
     public function rules(): array
     {
-        return [];
+        return ['name' => ['required', 'string', 'max:255'],];
     }
 }

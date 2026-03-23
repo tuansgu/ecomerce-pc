@@ -24,6 +24,8 @@ final class CreateUserTask extends ParentTask
             ],
         ))->validate();
 
+        $data['password'] = bcrypt($data['password']);
+
         return $this->repository->create($data);
     }
 }

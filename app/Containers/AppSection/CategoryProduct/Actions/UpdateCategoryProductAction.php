@@ -17,7 +17,7 @@ final class UpdateCategoryProductAction extends ParentAction
     public function run(UpdateCategoryProductRequest $request): CategoryProduct
     {
         $data = $request->sanitize([
-            // add your request data here
+            'name'
         ]);
 
         return $this->updateCategoryProductTask->run($data, $request->id);

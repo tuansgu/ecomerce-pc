@@ -17,6 +17,7 @@ final class CreateCategoryProductAction extends ParentAction
     public function run(CreateCategoryProductRequest $request): CategoryProduct
     {
         $data = $request->sanitize([
+            'name'
         ]);
 
         return $this->createCategoryProductTask->run($data);

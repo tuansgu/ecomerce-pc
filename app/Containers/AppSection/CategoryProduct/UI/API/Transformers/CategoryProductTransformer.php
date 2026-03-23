@@ -16,6 +16,7 @@ final class CategoryProductTransformer extends ParentTransformer
         return [
             'type' => $categoryproduct->getResourceKey(),
             'id' => $categoryproduct->getHashedKey(),
+            'name' => $categoryproduct->name,
             'created_at' => $categoryproduct->created_at,
             'updated_at' => $categoryproduct->updated_at,
             'readable_created_at' => $categoryproduct->created_at->diffForHumans(),

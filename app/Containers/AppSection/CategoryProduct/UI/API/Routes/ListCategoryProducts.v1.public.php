@@ -1,10 +1,10 @@
 <?php
 
 /**
- * @apiGroup           Type
- * @apiName            Create
+ * @apiGroup           CategoryProduct
+ * @apiName            List
  *
- * @api                {POST} /v1/types Invoke
+ * @api                {GET} /v1/category-products Invoke
  * @apiDescription     Endpoint description here...
  *
  * @apiVersion         1.0.0
@@ -22,9 +22,8 @@
  * }
  */
 
-use App\Containers\AppSection\Type\UI\API\Controllers\CreateTypeController;
+use App\Containers\AppSection\CategoryProduct\UI\API\Controllers\ListCategoryProductsController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('types', CreateTypeController::class)
-    ->middleware(['auth:api']);
+Route::get('category-products', ListCategoryProductsController::class);
 

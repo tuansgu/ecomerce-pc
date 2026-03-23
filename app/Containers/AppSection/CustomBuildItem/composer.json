@@ -1,0 +1,6 @@
+{
+    "name": "apiato/custombuilditem",
+    "description": "CustomBuildItem Container",
+    "type": "apiato-container",
+    "require": {}
+}

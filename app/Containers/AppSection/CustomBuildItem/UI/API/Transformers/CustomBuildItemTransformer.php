@@ -16,10 +16,12 @@ final class CustomBuildItemTransformer extends ParentTransformer
         return [
             'type' => $custombuilditem->getResourceKey(),
             'id' => $custombuilditem->getHashedKey(),
+            'custom_build_id' => $custombuilditem->custom_build_id,
+            'product_id' => $custombuilditem->product_id,
+            'quantity' => $custombuilditem->quantity,
+            'price' => $custombuilditem->price,
             'created_at' => $custombuilditem->created_at,
             'updated_at' => $custombuilditem->updated_at,
-            'readable_created_at' => $custombuilditem->created_at->diffForHumans(),
-            'readable_updated_at' => $custombuilditem->updated_at->diffForHumans(),
         ];
     }
 }

@@ -11,14 +11,21 @@ final class CreateDetailCartAction extends ParentAction
 {
     public function __construct(
         private readonly CreateDetailCartTask $createDetailCartTask,
-    ) {
-    }
+    ) {}
 
     public function run(CreateDetailCartRequest $request): DetailCart
     {
         $data = $request->sanitize([
-            // add your request data here
+            'product_id',
+            'quantity',
+            'price',
         ]);
+
+        $cart = \App\Containers\AppSection\Cart\Models\Cart::firstOrCreate(
+            ['user_id' => $request->user()->id]
+        );
+
+        $data['cart_id'] = $cart->id;
 
         return $this->createDetailCartTask->run($data);
     }

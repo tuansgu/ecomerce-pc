@@ -10,6 +10,10 @@ final class CreateDetailCartRequest extends ParentRequest
 
     public function rules(): array
     {
-        return [];
+        return [
+            'product_id' => ['required', 'integer', 'exists:products,id'],
+            'quantity' => ['required', 'integer', 'min:1'],
+            'price' => ['required', 'integer', 'min:0'],
+        ];
     }
 }

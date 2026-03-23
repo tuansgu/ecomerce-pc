@@ -12,6 +12,8 @@ final class UpdateTypeRequest extends ParentRequest
 
     public function rules(): array
     {
-        return [];
+        return [
+            'name' => ['required', 'string', 'max:255'],
+        ];
     }
 }

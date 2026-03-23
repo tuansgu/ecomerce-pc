@@ -12,8 +12,8 @@ final class ListDetailCartsTask extends ParentTask
     ) {
     }
 
-    public function run(): mixed
+    public function run(int $cartId): mixed
     {
-        return $this->repository->addRequestCriteria()->paginate();
+        return $this->repository->findWhere(['cart_id' => $cartId]);
     }
 }

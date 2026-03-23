@@ -16,10 +16,12 @@ final class DetailCartTransformer extends ParentTransformer
         return [
             'type' => $detailcart->getResourceKey(),
             'id' => $detailcart->getHashedKey(),
+            'cart_id' => $detailcart->cart_id,
+            'product_id' => $detailcart->product_id,
+            'quantity' => $detailcart->quantity,
+            'price' => $detailcart->price,
             'created_at' => $detailcart->created_at,
             'updated_at' => $detailcart->updated_at,
-            'readable_created_at' => $detailcart->created_at->diffForHumans(),
-            'readable_updated_at' => $detailcart->updated_at->diffForHumans(),
         ];
     }
 }

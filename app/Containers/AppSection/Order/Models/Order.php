@@ -9,7 +9,7 @@ use App\Ship\Parents\Models\Model as ParentModel;
 final class Order extends ParentModel
 {
     protected $fillable = [
-        'id',
+        'user_id',
         'total_amount',
         'status',
     ];

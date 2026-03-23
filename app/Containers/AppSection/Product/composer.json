@@ -1,0 +1,6 @@
+{
+    "name": "apiato/product",
+    "description": "Product Container",
+    "type": "apiato-container",
+    "require": {}
+}

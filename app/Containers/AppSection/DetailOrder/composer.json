@@ -1,0 +1,6 @@
+{
+    "name": "apiato/detailorder",
+    "description": "DetailOrder Container",
+    "type": "apiato-container",
+    "require": {}
+}

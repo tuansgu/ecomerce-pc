@@ -1,0 +1,6 @@
+{
+    "name": "apiato/categoryproduct",
+    "description": "CategoryProduct Container",
+    "type": "apiato-container",
+    "require": {}
+}

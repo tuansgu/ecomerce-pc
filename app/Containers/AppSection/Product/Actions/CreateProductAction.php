@@ -11,13 +11,18 @@ final class CreateProductAction extends ParentAction
 {
     public function __construct(
         private readonly CreateProductTask $createProductTask,
-    ) {
-    }
+    ) {}
 
     public function run(CreateProductRequest $request): Product
     {
         $data = $request->sanitize([
-            // add your request data here
+            'name',
+            'price',
+            'stock',
+            'description',
+            'image_path',
+            'category_product_id',
+            'type_id',
         ]);
 
         return $this->createProductTask->run($data);

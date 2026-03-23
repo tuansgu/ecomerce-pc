@@ -10,6 +10,14 @@ final class CreateProductRequest extends ParentRequest
 
     public function rules(): array
     {
-        return [];
+        return [
+            'name' => ['required', 'string', 'max:255'],
+            'price' => ['required', 'integer', 'min:0'],
+            'stock' => ['required', 'integer', 'min:0'],
+            'description' => ['nullable', 'string'],
+            'image_path' => ['nullable', 'string'],
+            'category_product_id' => ['required', 'integer', 'exists:category_products,id'],
+            'type_id' => ['required', 'integer', 'exists:types,id'],
+        ];
     }
 }

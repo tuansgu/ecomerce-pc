@@ -2,9 +2,9 @@
 
 /**
  * @apiGroup           Product
- * @apiName            List
+ * @apiName            Create
  *
- * @api                {GET} /v1/products Invoke
+ * @api                {POST} /v1/products Invoke
  * @apiDescription     Endpoint description here...
  *
  * @apiVersion         1.0.0
@@ -22,9 +22,8 @@
  * }
  */
 
-use App\Containers\AppSection\Product\UI\API\Controllers\ListProductsController;
+use App\Containers\AppSection\Product\UI\API\Controllers\CreateProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('products', ListProductsController::class)
-    ->middleware(['auth:api']);
+Route::post('products', CreateProductController::class);
 

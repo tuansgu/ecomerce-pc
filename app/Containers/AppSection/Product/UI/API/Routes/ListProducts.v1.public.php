@@ -2,9 +2,9 @@
 
 /**
  * @apiGroup           Product
- * @apiName            Update
+ * @apiName            List
  *
- * @api                {PATCH} /v1/products/:id Invoke
+ * @api                {GET} /v1/products Invoke
  * @apiDescription     Endpoint description here...
  *
  * @apiVersion         1.0.0
@@ -22,9 +22,8 @@
  * }
  */
 
-use App\Containers\AppSection\Product\UI\API\Controllers\UpdateProductController;
+use App\Containers\AppSection\Product\UI\API\Controllers\ListProductsController;
 use Illuminate\Support\Facades\Route;
 
-Route::patch('products/{id}', UpdateProductController::class)
-    ->middleware(['auth:api']);
+Route::get('products', ListProductsController::class);
 

@@ -2,9 +2,9 @@
 
 /**
  * @apiGroup           Product
- * @apiName            Create
+ * @apiName            Update
  *
- * @api                {POST} /v1/products Invoke
+ * @api                {PATCH} /v1/products/:id Invoke
  * @apiDescription     Endpoint description here...
  *
  * @apiVersion         1.0.0
@@ -22,9 +22,8 @@
  * }
  */
 
-use App\Containers\AppSection\Product\UI\API\Controllers\CreateProductController;
+use App\Containers\AppSection\Product\UI\API\Controllers\UpdateProductController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('products', CreateProductController::class)
-    ->middleware(['auth:api']);
+Route::patch('products/{id}', UpdateProductController::class);
 

@@ -16,6 +16,7 @@ final class TypeTransformer extends ParentTransformer
         return [
             'type' => $type->getResourceKey(),
             'id' => $type->getHashedKey(),
+            'name' => $type->name,
             'created_at' => $type->created_at,
             'updated_at' => $type->updated_at,
             'readable_created_at' => $type->created_at->diffForHumans(),
